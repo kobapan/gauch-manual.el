@@ -172,7 +172,7 @@ open tcp connection to gauch-manual-server and receive manual location"
                  (eq last-command 'exchange-point-and-mark))
                 (buffer-substring-no-properties
                  (region-beginning) (region-end)))
-               (t (thing-at-point 'word)))
+               (t (thing-at-point 'symbol)))
          current-prefix-arg))
   (setq str (read-from-minibuffer "Search word: " str))
   (gauche-manual-browse
@@ -180,4 +180,6 @@ open tcp connection to gauch-manual-server and receive manual location"
   (gauche-manual-clean))
 
 
+
+(provide 'gauche-manual)
 ;; gauche-manual.el
