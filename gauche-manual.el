@@ -174,7 +174,7 @@ open tcp connection to gauch-manual-server and receive manual location"
                  (region-beginning) (region-end)))
                (t (thing-at-point 'symbol)))
          current-prefix-arg))
-  (setq str (read-from-minibuffer "Search word: " str))
+  (setq str (read-from-minibuffer "Search Gauche Manual: " str))
   (gauche-manual-browse
    (format gauche-manual-search-engine (gauche-manual-url-encode str)))
   (gauche-manual-clean))
