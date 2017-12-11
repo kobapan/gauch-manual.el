@@ -144,7 +144,8 @@ open tcp connection to gauch-manual-server and receive manual location"
 
 (defun gauche-manual-browse (request)
   "select browser"
-  (let ((url (gauche-manual-redirection request))
+  ;;(let ((url (gauche-manual-redirection request)) ;; エラー吐くので使わない
+  (let ((url request)
         (b (get-buffer "*w3m*")))
     (if (and gauche-manual-use-w3m (featurep 'w3m-load))
         (and (if b
